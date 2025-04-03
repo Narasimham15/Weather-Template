@@ -1,78 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Update</title>
+    <title>Weather app</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #74ebd5, #acb6e5);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background: linear-gradient(to right, #e2b541, #d7f681);
             text-align: center;
             padding: 50px;
         }
 
-        .weather-container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        .Weather-container {
+            background: rgba(243, 255, 6, 0.414);
+            padding: 50px;
+            border-radius: 50px;
+            box-shadow: 0px 5px 8px rgb(0, 0, 0.2);
             display: inline-block;
         }
 
-        input {
-            padding: 10px;
-            width: 200px;
-            margin-bottom: 10px;
+        .Weather-info h2 {
+            color: #0028ee;
         }
 
-        button {
-            padding: 10px;
-            background: #007BFF;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: #0056b3;
-        }
-
-        .weather-info h2 {
-            color: #333;
-        }
-
-        .weather-info p {
-            font-size: 18px;
-            color: #555;
+        .Weather-info p {
+            font-size: 20px;
+            color: #e21b1b;
         }
     </style>
+
 </head>
+
 <body>
-    <div class="weather-container">
-        <h1>Weather Update</h1>
-        
-        <input type="text" id="cityInput" placeholder="Enter city name">
-        <button onclick="updateCity()">Update City</button>
-        
-        <div class="weather-info">
-            <h2 id="cityName">City: -</h2>
-            <p>Temperature: 25°C</p>
-            <p>Condition: Sunny</p>
+    <div class="Weather-container">
+        <h1>
+            Weather Update
+        </h1>
+        <div class="Weather-info">
+            <h2> City: Hyderabad </h2>
+            <p> Temperature: 28° C</p>
+            <p> Condition: Sunny</p>
         </div>
     </div>
-
-    <script>
-        function updateCity() {
-            let city = document.getElementById("cityInput").value;
-            
-            if (city === "") {
-                alert("Please enter a city name.");
-                return;
-            }
-
-            document.getElementById("cityName").innerText = "City: " + city;
-        }
-    </script>
 </body>
+
 </html>
